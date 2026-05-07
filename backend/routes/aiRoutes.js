@@ -7,6 +7,5 @@ const {
 
 router.post("/summarize", summarizeChat);
 router.post("/sentiment", analyzeSentiment);
-console.log("Route hit");
 
 module.exports = router;

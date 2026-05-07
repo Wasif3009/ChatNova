@@ -11,7 +11,7 @@ const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const aiRoutes = require("./routes/aiRoutes");
 const path = require("path");
-console.log("KEY:", process.env.HF_TOKEN);
+
 
 dotenv.config();
 connectDB();

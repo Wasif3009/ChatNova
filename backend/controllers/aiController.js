@@ -28,8 +28,6 @@ const summarizeChat = async (req, res) => {
       summary: response.data[0].summary_text,
     });
   } catch (error) {
-    console.log("ERROR:", error.response?.data || error.message);
-
     res.status(500).json({
       error: "Summarization failed",
     });
@@ -54,8 +52,6 @@ const analyzeSentiment = async (req, res) => {
       },
     );
 
-    console.log("HF RESPONSE:", response.data);
-
     let result;
 
     if (Array.isArray(response.data[0])) {
@@ -75,8 +71,6 @@ const analyzeSentiment = async (req, res) => {
       confidence: result.score,
     });
   } catch (error) {
-    console.log("ERROR:", error.response?.data || error.message);
-
     res.status(500).json({
       error: "Sentiment analysis failed",
     });

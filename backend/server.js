@@ -11,11 +11,18 @@ const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const aiRoutes = require("./routes/aiRoutes");
 const path = require("path");
+const cors = require("cors");
 
 dotenv.config();
 connectDB();
 const app = express();
 app.use(express.json()); // to accept json data
+app.use(
+  cors({
+    origin: "https://chatnova-frontend-29tn.onrender.com",
+    credentials: true,
+  }),
+);
 
 app.get("/", (req, res) => {
   res.send("API is run sucess");

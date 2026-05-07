@@ -23,7 +23,7 @@ import ScrollableChat from "./ScrollableChat";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Flex } from "@chakra-ui/react";
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:3000";
+const ENDPOINT = "https://chatnova-38r4.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

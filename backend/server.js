@@ -12,7 +12,6 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const aiRoutes = require("./routes/aiRoutes");
 const path = require("path");
 
-
 dotenv.config();
 connectDB();
 const app = express();
@@ -57,7 +56,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatnova-frontend-29tn.onrender.com",
     credentials: true,
   },
 });
